@@ -52,7 +52,7 @@ document.getElementById('unar-min').addEventListener("click", function (){
         const neg = -Math.abs(inputWindow.value);
         inputWindow.value = neg;
     } else {
-        inputWindow.value = +inputWindow.value;
+        inputWindow.value = Math.abs(inputWindow.value);
     }
 })
 
@@ -106,43 +106,37 @@ document.getElementById('num_0').addEventListener('click', function (){
 
 document.getElementById('calc-btn').addEventListener('click', function () {
     if (operation === 'sum'){
-        const result = parseInt(lastOperand) + parseInt(inputWindow.value);
+        const result = eval(lastOperand) + eval(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
     }
     if (operation === 'subt'){
-        const result = parseInt(lastOperand) - parseInt(inputWindow.value);
+        const result = eval(lastOperand) - eval(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
     }
     if (operation === 'mult'){
-        const result = parseInt(lastOperand) * parseInt(inputWindow.value);
+        const result = eval(lastOperand) * eval(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
     }
     if (operation === 'div'){
-        const result = parseInt(lastOperand) / parseInt(inputWindow.value);
+        const result = eval(lastOperand) / eval(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
     }
     if (operation === 'exp'){
-        const result = parseInt(lastOperand) ** parseInt(inputWindow.value);
+        const result = eval(lastOperand) ** eval(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
     }
     if (operation === 'sqrt'){
         const result = Math.sqrt(inputWindow.value);
-        operation = null;
-        lastOperand = null;
-        inputWindow.value = result;
-    }
-    if (operation === 'un_minus'){
-        const result = -Math.abs(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
