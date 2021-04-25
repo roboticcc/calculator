@@ -12,9 +12,9 @@ document.getElementById('btn_clr').addEventListener('click', function () {
 })
 
 document.getElementById('sum_btn').addEventListener('click', function () {
-    lastOperand = inputWindow.value;
-    operation = 'sum';
-    inputWindow.value = '';
+        lastOperand = inputWindow.value;
+        operation = 'sum';
+        inputWindow.value = '';
 })
 
 document.getElementById('subt_btn').addEventListener("click", function (){
@@ -47,7 +47,20 @@ document.getElementById('sqrt_btn').addEventListener("click", function (){
     inputWindow.value = '';
 })
 
+document.getElementById('unar-min').addEventListener("click", function (){
+    if(inputWindow.value >= 0){
+        const neg = -Math.abs(inputWindow.value);
+        inputWindow.value = neg;
+    } else {
+        inputWindow.value = +inputWindow.value;
+    }
+})
+
 //кнопки с цифрами
+
+document.getElementById('dot').addEventListener('click', function (){
+    inputWindow.value += '.';
+})
 
 document.getElementById('num_1').addEventListener('click', function (){
     inputWindow.value += 1;
@@ -124,6 +137,12 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     }
     if (operation === 'sqrt'){
         const result = Math.sqrt(inputWindow.value);
+        operation = null;
+        lastOperand = null;
+        inputWindow.value = result;
+    }
+    if (operation === 'un_minus'){
+        const result = -Math.abs(inputWindow.value);
         operation = null;
         lastOperand = null;
         inputWindow.value = result;
