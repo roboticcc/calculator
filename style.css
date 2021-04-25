@@ -1,3 +1,32 @@
+.card-body {
+    background-color: black;
+}
+
+#btn_clr, #calc-btn{
+    background-color: darkorange;
+    border-style: none;
+    color: white;
+}
+
+.oper-btn {
+    background-color: darkslategray;
+    color: white;
+}
+
+#calc-btn{
+    margin-top: 4px;
+}
+
+#btn_clr{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.num{
+    background-color: grey;
+    color: white;
+}
+
 .calc-row {
     height: 100vh;
     font-family: 'Share Tech Mono', monospace;
