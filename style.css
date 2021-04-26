@@ -3,7 +3,7 @@ body{
     -webkit-tap-highlight-color: transparent;
 }
 
-#btn_bcksp{
+#btn_bcksp {
     margin-top: 4px;
     margin-left: 1px;
 }
@@ -13,7 +13,7 @@ body{
     border-radius: 5% ;
 }
 
-#btn_clr, #calc-btn, #btn_bcksp{
+#btn_clr, #calc-btn, #btn_bcksp {
     background-color: darkorange;
     border-style: none;
     color: white;
