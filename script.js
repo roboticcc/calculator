@@ -104,42 +104,47 @@ document.getElementById('num_0').addEventListener('click', function (){
 
 //основная логика
 
+document.getElementById('btn_bcksp').addEventListener("click", function (){
+    const erase = inputWindow.value;
+    inputWindow.value = erase.substr(0, erase.length - 1);
+})
+
 document.getElementById('calc-btn').addEventListener('click', function () {
     if (operation === 'sum'){
         const result = eval(lastOperand) + eval(inputWindow.value);
         operation = null;
         lastOperand = null;
-        inputWindow.value = result;
+        inputWindow.value = result.toPrecision(3);
     }
     if (operation === 'subt'){
         const result = eval(lastOperand) - eval(inputWindow.value);
         operation = null;
         lastOperand = null;
-        inputWindow.value = result;
+        inputWindow.value = result.toPrecision(3);
     }
     if (operation === 'mult'){
         const result = eval(lastOperand) * eval(inputWindow.value);
         operation = null;
         lastOperand = null;
-        inputWindow.value = result;
+        inputWindow.value = result.toPrecision(3);
     }
     if (operation === 'div'){
         const result = eval(lastOperand) / eval(inputWindow.value);
         operation = null;
         lastOperand = null;
-        inputWindow.value = result;
+        inputWindow.value = result.toPrecision(3);
     }
     if (operation === 'exp'){
         const result = eval(lastOperand) ** eval(inputWindow.value);
         operation = null;
         lastOperand = null;
-        inputWindow.value = result;
+        inputWindow.value = result.toPrecision(3);
     }
     if (operation === 'sqrt'){
         const result = Math.sqrt(inputWindow.value);
         operation = null;
         lastOperand = null;
-        inputWindow.value = result;
+        inputWindow.value = result.toPrecision(3);
     }
 })
 

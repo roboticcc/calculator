@@ -1,8 +1,19 @@
-.card-body {
-    background-color: black;
+body{
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-#btn_clr, #calc-btn{
+#btn_bcksp{
+    margin-top: 4px;
+    margin-left: 1px;
+}
+
+.card-body {
+    background-color: black;
+    border-radius: 5% ;
+}
+
+#btn_clr, #calc-btn, #btn_bcksp{
     background-color: darkorange;
     border-style: none;
     color: white;
@@ -15,6 +26,10 @@
 
 #calc-btn{
     margin-top: 4px;
+}
+
+#calc-btn:active{
+    
 }
 
 #btn_clr{
